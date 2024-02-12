@@ -1,2 +1,2 @@
-# reypost
+# ReyPost
 A simple archive blog
