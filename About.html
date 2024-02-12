@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Reypost</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .back-btn {
+            color: #6B46C1;
+            background-color: transparent;
+            border: 2px solid #6B46C1;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: #6B46C1;
+            color: white;
+        }
+
+        .github-btn {
+            color: white;
+            background-color: #6B46C1;
+            border: none;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .github-btn:hover {
+            background-color: #6F4AB8;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold">Reypost</a>
+            <a href="index.html" class="back-btn flex items-center px-3 py-2 rounded-lg animate__animated animate__fadeInLeft">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="container mx-auto py-12">
+        <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl animate__animated animate__fadeInUp">
+            <h1 class="text-3xl md:text-4xl font-semibold mb-4">About Me</h1>
+            <p class="text-lg leading-relaxed mb-4">Ciao! Sono il creatore di Reypost, un archivio personale online dove posso conservare al sicuro le mie ricerche.</p>
+            <p class="text-lg leading-relaxed mb-4">Il mio professore di storia mi ha sempre chiesto di fare ricerche e ho notato che il materiale cartaceo può rovinarsi nel tempo o addirittura andare perso. Questo mi ha spinto a creare Reypost, una sorta di archivio personale online dove posso postare e conservare tutto ciò che desidero, mantenendolo al sicuro per un futuro.</p>
+            <p class="text-lg leading-relaxed mb-4">Spero che Reypost possa diventare un utile strumento per me e magari anche per altri...</p>
+            <a href="https://github.com/Helixo22/" class="btn btn-success github-btn flex items-center px-3 py-2 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Contribute</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
