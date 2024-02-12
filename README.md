@@ -1,10 +1,6 @@
 # Reypost
 
-Benvenuto su Reypost! Questo è un archivio personale online per conservare al sicuro le tue ricerche storiche e altro ancora.
-
-## Descrizione
-
-Reypost è stato creato per fornire un modo sicuro e conveniente per conservare e organizzare le tue ricerche, documenti e note storiche. Non preoccuparti più di perdere o danneggiare i tuoi documenti cartacei, Reypost ti permette di accedere alle tue risorse ovunque tu sia.
+Benvenuto su Reypost! Questo è un archivio personale online
 
 ## Prerequisiti
 
