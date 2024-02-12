@@ -18,5 +18,8 @@ Per installare Reypost e i suoi moduli dipendenti, segui questi passaggi:
    ```
 
 ## Sito Web
-- Sito Web: [reypost](https://reypostblog.web.app)
+- Sito Web: [ReyPost-Blog](https://reypostblog.web.app)
+
+## Disclaimer
+Si prega di notare che Reypost è un archivio personale e l'accesso è garantito solo all'autore del progetto. Non è prevista alcuna funzionalità di accesso per altri utenti.
 
