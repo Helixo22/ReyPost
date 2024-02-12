@@ -12,7 +12,7 @@ Per installare Reypost e i suoi moduli dipendenti, segui questi passaggi:
 
 1. Clona il repository su una directory locale:
    ```bash
-   [git clone https://github.com/tuonome/reypost.git](https://github.com/Helixo22/reypost.git)
+   git clone https://github.com/Helixo22/reypost.git
    cd reypost
    npm install
    ```
