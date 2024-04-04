@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reypost - Message Analytics</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+      
+           .back-btn {
+            color: #4675c1;
+            background-color: transparent;
+            border: 2px solid #4690c1;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: #46b7c1;
+            color: white;
+        }
+
+       
+        .custom-text {
+            text-align: justify;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+    
+        .custom-heading {
+            color: #46b7c1;
+            border-bottom: 2px solid #46b7c1;
+            margin-bottom: 1.5rem;
+        }
+
+      
+        .custom-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+      
+        .custom-list {
+            list-style-type: square;
+            margin-left: 2rem;
+        }
+
+
+        .custom-text {
+            color: #333333;
+        }
+
+        /* Custom styles for headings */
+        .custom-heading {
+            color: #46b7c1;
+            border-bottom: 2px solid #46b7c1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans leading-normal tracking-normal">
+
+   <!-- Navigation -->
+    <nav class="bg-gray-800 p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class=" text-white text-xl font-semibold">ReyPost - Message Analytics</a>
+            <a href="index.html" class="back-btn flex items-center px-3 py-2 rounded-lg animate__animated animate__fadeInLeft">Back to Home</a>
+        </div>
+    </nav>
+
+      <!-- Analytics Section -->
+      <section class="container mx-auto py-12">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl animate__animated animate__fadeInUp">
+            <h1 class="text-3xl md:text-4xl font-semibold mb-4 custom-heading">Message Analytics</h1>
+            <div class="mb-8">
+                <!-- Number display -->
+                <p id="messageCount" class="text-6xl font-semibold text-center">0 x21</p>
+            </div>
+        </div>
+        </div>
+            <div>
+                <h2 class="text-xl font-semibold mb-4 custom-heading">Daily Message Statistics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Message Statistics Cards -->
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Monday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1000</p>
+                    </div>
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Tuesday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1200</p>
+                    </div>
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Wednesday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1100</p>
+                    </div>
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Thursday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1300</p>
+                    </div>
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Friday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1500</p>
+                    </div>
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Saturday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1400</p>
+                    </div>
+                    <div class="bg-gray-200 border border-gray-300 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-2">Sunday</h3>
+                        <p class="text-gray-700">Estimated messages sent: 1600</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Check if message count exists in local storage
+        let messageCount = localStorage.getItem('messageCount');
+        if (!messageCount) {
+            // If not, initialize message count to 210000000
+            messageCount = 210000000;
+        }
+
+        // Update message count every second
+        setInterval(() => {
+            messageCount = BigInt(messageCount) + BigInt(100000000000000000000);
+            // Store updated message count in local storage
+            localStorage.setItem('messageCount', messageCount);
+            // Format and display message count with twenty-one zeros followed by "x21"
+            document.getElementById('messageCount').textContent = messageCount.toString().replace(/\B(?=(\d{21})+(?!\d))/g, ".").concat(" x21");
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Reypost</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
+
+    <style>
+        /* Additional custom styles can be added here */
+        .back-btn {
+            color: #6B46C1;
+            background-color: transparent;
+            border: 2px solid #6B46C1;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: #6B46C1;
+            color: white;
+        }
+    </style>
+
+      <!-- Navigation -->
+      <nav class="bg-gray-800 p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold">ReyPost - News</a>
+            <a href="index.html" class="back-btn flex items-center px-3 py-2 rounded-lg animate__animated animate__fadeInLeft">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 py-20 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeInDown">News Section</h1>
+            <p class="text-lg md:text-xl animate__animated animate__fadeInUp">Check out the latest news and updates from Reypost.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Article 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInLeft">
+                <h2 class="text-2xl font-semibold mb-2">We've implemented article request functionality!</h2>
+                <p class="text-gray-400">Now you can request specific articles you'd like to see on our blog.</p>
+                <p class="text-gray-600">Stay tuned for more exciting updates!</p>
+            </div>
+
+             <!-- Article 2 -->
+             <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInLeft">
+                <h2 class="text-2xl font-semibold mb-2">How to support us?</h2>
+                <p class="text-gray-400">Leave a star on the github repository if you want and you will give great support to the project or the buy my coffee button will soon be available to donate a few cents.</p>
+                <a href="https://github.com/Helixo22/ReyPost" class="btn btn-purple mt-4">Contribute</a>
+
+            </div>
+           
+        </div>
+    </section>
+
+
+</body>
+
+</html>

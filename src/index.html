@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reypost</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .nav-link {
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #6B46C1;
+        }
+
+        .github-btn {
+            color: white;
+            background-color: #6B46C1;
+            border: none;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .github-btn:hover {
+            background-color: #6F4AB8;
+        }
+
+        .card-button {
+            color: #6B46C1;
+            background-color: transparent;
+            border: 2px solid #6B46C1;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .card-button:hover {
+            background-color: #6B46C1;
+            color: white;
+        }
+
+        .about-btn {
+            color: #6B46C1;
+            background-color: transparent;
+            border: 2px solid white;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .about-btn:hover {
+            background-color: #6B46C1;
+            color: white;
+        }
+
+        /* Purple circle style */
+        .request-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #6B46C1;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 9999;
+            transition: transform 0.3s ease-in-out;
+            color: white;
+        }
+
+        /* Purple circle hover effect */
+        .request-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Plus icon style */
+        .plus-icon {
+            font-size: 24px;
+        }
+
+        /* Newspaper icon style */
+        .newspaper-icon {
+            font-size: 24px;
+        }
+
+         /* Popup styles */
+         .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            z-index: 9999;
+            font-size: 1.2rem;
+        }
+
+        .close-btn {
+            background-color: #6b46c1;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .close-btn:hover {
+            background-color: #8257d5;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 p-6 flex justify-between items-center">
+        <a href="#" class="text-xl font-semibold">Reypost-Blog</a>
+        <!-- Central search bar -->
+        <div class="relative">
+            <input id="search-input" type="text" placeholder="Search..." class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring focus:border-purple-500">
+            <div id="search-results" class="absolute left-0 w-full bg-gray-800 mt-1 rounded-lg shadow-lg hidden"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 py-20 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Welcome to ReyPost</h1>
+            <p class="text-lg md:text-xl animate__animated animate__fadeInUp">Created by Alessio Capasso</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post Cards -->
+            <!-- Example Card 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInLeft">
+                <h2 class="text-2xl font-semibold mb-2">Dionigi il piccolo</h2>
+                <p class="text-gray-400">Dionigi il Piccolo, fu un monaco scita vissuto a Roma tra la fine del V e l'inizio del VI secolo d.C.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                <p class="text-gray-600">Bio autore: Alessio Capasso</p>
+                <a href="blog1.html" class="card-button py-2 px-4 rounded mt-4 inline-block hover:bg-purple-700 transition duration-300 fixed-height-button">Read more</a>
+            </div>
+            <!-- Example Card 2 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInUp">
+                <h2 class="text-2xl font-semibold mb-2">Tertulliano</h2>
+                <p class="text-gray-400">Quinto Settimio Fiorente Tertulliano, o semplicemente Tertulliano, è stato uno scrittore romano, filosofo, cristiano. ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                <p class="text-gray-600">Bio autore: Alessio Capasso</p>
+                <a href="blog2.html" class="card-button py-2 px-4 rounded mt-4 inline-block hover:bg-purple-700 transition duration-300 fixed-height-button">Read more</a>
+            </div>
+            <!-- Example Card 3 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInRight">
+                <h2 class="text-2xl font-semibold mb-2">Donne nel Kosmos Spartanao</h2>
+                <p class="text-gray-400">
+                    Questa ricerca offre uno sguardo dettagliato sulla vita delle donne nell'antica Sparta, evidenziando il loro ruolo e influenza nella società.</p>
+                <p class="text-gray-600">Bio autore: Giorgia Bile</p>
+                <a href="blog3.html" class="card-button py-2 px-4 rounded mt-4 inline-block hover:bg-purple-700 transition duration-300 fixed-height-button">Read more</a>
+            </div>
+            <!-- Example Card 4 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInLeft">
+                <h2 class="text-2xl font-semibold mb-2">I Sepolcri Di Ugo Foscolo</h2>
+                <p class="text-gray-400">
+                    Questa ricerca offre uno sguardo dettagliato sul dove, quando e perché è stata composta l’opera “I Sepolcri” ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ </p>
+                <p class="text-gray-600">Bio autore: Antonino Rocco</p>
+                <a href="blog4.html" class="card-button py-2 px-4 rounded mt-4 inline-block hover:bg-purple-700 transition duration-300 fixed-height-button">Read more</a>
+            </div>
+            <!-- Example Card 5 Special -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl animate__animated animate__fadeInUp">
+                <h2 class="text-blue-400 text-2xl font-semibold mb-2 text-sky-400">Fake News (Special edition) </h2>
+                <p class="text-gray-400">The discussion of fake news is a delicate and very complex discussion where we talk in detail about false and true sources, the consequences and how to recognize them.ㅤㅤㅤㅤ</p>
+                <p class="text-gray-600">Bio autore: Alessio Capasso</p>
+
+
+                <a href="fakenews.html" style="  
+                color: #468ac1;
+                background-color: transparent;
+                border: 2px solid #469ec1;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+                " 
+                onmouseover="this.style.backgroundColor='#46b7c1'; this.style.color='white';" 
+                onmouseout="this.style.backgroundColor='transparent'; this.style.color='#468ac1';"
+                class="card-button py-2 px-4 rounded mt-4 inline-block hover:bg-purple-700 transition duration-300 fixed-height-button">Read more</a>
+            
+
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Request Button (Visible on both desktop and mobile) -->
+    <a href="request.html" class="request-btn" style="background-color: #6B46C1;">
+        <i class="fas fa-plus plus-icon"></i>
+    </a>
+    
+    <!-- Newspaper Button (Visible on both desktop and mobile) -->
+    <a href="news.html" class="request-btn" style="background-color: #6B46C1; bottom: 20px; left: 20px;">
+        <i class="fas fa-newspaper newspaper-icon"></i>
+    </a>
+    
+
+
+
+
+    <script>
+     // Display the popup when the page loads
+     window.onload = function() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    // Close the popup when the close button is clicked
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'none';
+    });
+
+
+        // JavaScript for handling search functionality
+        var searchInput = document.getElementById('search-input');
+        var searchResults = document.getElementById('search-results');
+
+        searchInput.addEventListener('input', function () {
+            var searchTerm = this.value.trim().toLowerCase();
+            if (searchTerm === '') {
+                searchResults.innerHTML = '';
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            // Simulate search results (replace with actual search functionality)
+            var fakeResults = ['Dionigi il piccolo', 'Tertulliano', 'Donne nel Kosmos Spartanao', 'I Sepolcri Di Ugo Foscolo'];
+            var blogLinks = ['blog1.html', 'blog2.html', 'blog3.html', 'blog4.html'];
+
+            var matchingResults = fakeResults.filter(function (result) {
+                return result.toLowerCase().includes(searchTerm);
+            });
+
+            if (matchingResults.length > 0) {
+                var resultsHTML = matchingResults.map(function (result, index) {
+                    return '<a href="' + blogLinks[fakeResults.indexOf(result)] + '" class="search-result cursor-pointer block py-2 px-3 hover:bg-gray-700 transition duration-300">' + result + '</a>';
+                }).join('');
+                searchResults.innerHTML = resultsHTML;
+                searchResults.classList.remove('hidden');
+            } else {
+                searchResults.innerHTML = '<div class="search-result">No results found</div>';
+                searchResults.classList.remove('hidden');
+            }
+        });
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.relative')) {
+                searchResults.classList.add('hidden');
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>
